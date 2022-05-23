@@ -11,7 +11,6 @@ export default {
     },
     getOne: async (req: Request, res: Response): Promise<Response> => {
         const user = await User.findOne({ _id: req.params.id })
-        console.log('User', user)
         return res.json(user)
     },
     getAll: async (_: Request, res: Response): Promise<Response> => {
